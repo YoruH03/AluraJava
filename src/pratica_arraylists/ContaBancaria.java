@@ -22,6 +22,11 @@ public class ContaBancaria {
     public double getSaldo() {
         return saldo;
     }
+
+    public int getNumeroConta() {
+        return numeroConta;
+    }
+    
     
     public static void main(String[] args){
         ContaBancaria conta1 = new ContaBancaria(1,200);
@@ -31,11 +36,13 @@ public class ContaBancaria {
         
         listaContas.add(conta1);
         listaContas.add(conta2);
+        listaContas.add(conta3);
         
         int i = 0;
         int index_save = 0;
         double saldo_save = 0;
         double saldo_aux;
+        /*
         for(ContaBancaria konta : listaContas){
             saldo_aux = konta.getSaldo();
             if(saldo_aux>saldo_save){
@@ -47,6 +54,12 @@ public class ContaBancaria {
         }
         System.out.println("A conta que teve o maior saldo é a conta de Id: "+index_save);
         System.out.println("O saldo dela é: "+saldo_save);
+*/
+        for(ContaBancaria konta: listaContas){
+            System.out.println("---------Nova Conta ----------");
+            System.out.println("Número da conta: "+konta.getNumeroConta());
+            System.out.println("Saldo da conta: "+konta.getSaldo());
+        }
     }
     
     

@@ -8,6 +8,8 @@ import br.com.alura.screenmatch.modelos.Filme;
 import br.com.alura.screenmatch.modelos.Serie;
 import br.com.alura.screenmatch.modelos.Titulo;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 /**
  *
@@ -41,6 +43,15 @@ public class PrincipalComListas {
         for(Titulo item: listaTitulos){
                 System.out.println(item.toString());
         }
+        System.out.println("Antes da ordenação");
+        System.out.println(listaTitulos.toString());
+        Collections.sort(listaTitulos);
+        System.out.println("Depois da comparação");
+        System.out.println(listaTitulos.toString());
+        
+        listaTitulos.sort(Comparator.comparing(Titulo::getAnoDeLancamento));
+        System.out.println("Ordenando por ano...");
+        System.out.println(listaTitulos);
         
         
     }
